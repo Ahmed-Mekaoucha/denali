@@ -1,6 +1,5 @@
 <?php require '../includs/header.inc.php'; ?>
 <?php require '../includs/navbar.inc.php';?>
-
 <section class="container">
 	<section id="mainAsideParent">
 		<?php require '../includs/sidebar.inc.php'; ?> 

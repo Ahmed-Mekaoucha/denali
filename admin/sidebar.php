@@ -1,10 +1,14 @@
 <?php $View = new View();
 foreach ($View->getUserByEmail($_SESSION['email']) as $row):
 	$profilePicture = $row['profilePicture'];
-endforeach;?>
+endforeach;
+
+
+
+?>
 <aside id="leftAdminSide">
 	<?php  function addClasssActive($page) { return strripos($_SERVER['REQUEST_URI'], $page)? 'active': ''; } ?>
-	<section id="profilePicture" style="background-image: url(<?php echo "../".$profilePicture?>);">
+	<section id="profilePicture" style="background-image: url(<?php echo $profilePicture !== "" ? "../".$profilePicture : "https://place-hold.it/160x160/#33333";?>);">
 		<span id="profileSpin"><i id="pubspiner" class="fas fa-spinner fa-pulse fa-2x"></i></span>
 	</section>
 	<section id="addProfileImage">
