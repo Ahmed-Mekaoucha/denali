@@ -1,0 +1,114 @@
+@media only screen and (min-width: 992px) and (max-width: 1547px) {
+	body {
+		nav {
+			.container {
+				section#logoMenuContainer {
+					section#iconMenu {
+    					display: none;
+					}
+				}
+			}
+		}
+		section#Admin {
+			flex-direction: column;
+			aside#leftAdminSide {
+				ul {
+					text-align: center;
+				}
+			}
+			aside#leftAdminSide, main {
+				margin-bottom: 20px;
+			}
+			aside#rightAdminSide {
+				section#featuredImg {
+					width: 50%;
+					margin: auto;
+				}
+			}
+
+		}
+
+		section.container {
+			main {
+				section#profileContainer {
+					display: block;
+					section#profileImg {
+						width: 250px;
+						height: 250px;
+						padding: 0;
+						margin: 0 auto 40px;
+						section {
+							border-radius: 50%;
+						}
+					}
+					section#profileInfo {
+						padding: 0;
+						width: 100%;
+						h1, h2, h3 {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+
+		section#popUpcontainer {
+			section#signInUpContainer {
+				width: 60%;
+				form {
+					padding: 20px;
+				}
+			}
+		}
+		section#mainAsideParent {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
+			aside {
+				width: 22%;
+				section#info {
+					section#asideimg {
+	    				width: 100px;
+	    				height: 100px;
+	    			}
+	    			section#socialMedia {
+	    				ul {
+	    					li {
+	    						margin-right: -2px;
+	    					}
+	    				}
+	    			}
+	    		}
+
+	    		section#info {
+					span {
+						margin: 25px 0;
+					}
+				}
+			}
+
+			main {
+				width: 78%;
+				margin-left: 3%;
+				article {
+					flex-direction: column;
+					section.aricleimg {
+						flex-basis: unset !important;
+						width: 400px;
+						height: 400px;
+						margin: 0 auto 20px;
+					}
+
+				}
+
+			}
+			aside {
+				margin-top: 0;
+			}
+		}
+	}
+	
+}

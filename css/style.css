@@ -1,0 +1,1024 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tox-statusbar {
+  display: none;
+}
+
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+.button, body section#Admin main form#updatePass input[name=updatePassword] {
+  padding: 11px 20px;
+  font: normal 16px/20px Lato, sans-serif;
+  color: #aaa;
+  background-color: #888;
+  border-radius: 3px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.button:hover, body section#Admin main form#updatePass input[name=updatePassword]:hover {
+  background-color: #333;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #F0F0F0;
+  overflow-y: scroll;
+}
+body section#mobileMenu {
+  display: none;
+  z-index: 9999;
+}
+body section#Admin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+}
+body section#Admin aside#leftAdminSide {
+  background-color: white;
+  padding: 10px;
+}
+body section#Admin aside#leftAdminSide section#profilePicture {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+  background-size: cover;
+}
+body section#Admin aside#leftAdminSide section#addProfileImage {
+  font: normal 16px/20px Lato, sans-serif;
+  color: #333;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #333;
+  margin: 20px 0 0;
+  position: relative;
+}
+body section#Admin aside#leftAdminSide section#addProfileImage input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+body section#Admin aside#leftAdminSide section#addProfileImage span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  padding: 5px;
+  box-sizing: border-box;
+  z-index: 0;
+}
+body section#Admin aside#leftAdminSide section#addProfileImage:hover {
+  background-color: #333;
+  color: white;
+}
+body section#Admin aside#leftAdminSide ul {
+  list-style-type: none;
+  padding: 30px 0 0;
+  margin: 0;
+}
+body section#Admin aside#leftAdminSide ul li a {
+  background-color: unset;
+  -webkit-transition: 0.6s ease-in-out;
+  -o-transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out;
+  font: normal 16px/20px Lato, sans-serif;
+  text-decoration: none;
+  display: block;
+  padding: 11px 20px;
+  color: #333;
+}
+body section#Admin aside#leftAdminSide ul li a:hover {
+  background-color: #333;
+  color: white;
+}
+body section#Admin aside#leftAdminSide ul li a.active {
+  background-color: #333;
+  color: white;
+}
+body section#Admin main {
+  -webkit-box-flex: 5;
+  -ms-flex: 5 1 0px;
+  flex: 5 1 0;
+}
+body section#Admin main input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+  font: normal 16px/20px Lato, sans-serif;
+  border: none;
+}
+body section#Admin main input:focus {
+  outline: none;
+  border-left: #3498db solid 2px;
+}
+body section#Admin main .richText {
+  position: unset;
+}
+body section#Admin main .richText .richText-editor {
+  min-height: 600px;
+  overflow: auto;
+  word-break: break-all;
+}
+body section#Admin main .richText .richText-editor textarea {
+  resize: none;
+  width: 100%;
+  min-height: 600px;
+  padding: 11px;
+  font: normal 16px/20px Lato, sans-serif;
+}
+body section#Admin main form#updatePass,
+body section#Admin main form#profileInfo {
+  font: normal 16px/20px Lato, sans-serif;
+  color: #333;
+  background-color: white;
+  padding: 30px;
+}
+body section#Admin main form#updatePass section,
+body section#Admin main form#profileInfo section {
+  background-color: #F0F0F0;
+  padding: 10px;
+  margin: 10px 0;
+}
+body section#Admin main form#updatePass section label,
+body section#Admin main form#profileInfo section label {
+  display: block;
+  font-weight: bold;
+  padding: 10px 0;
+}
+body section#Admin main form#updatePass section label:nth-of-type(1),
+body section#Admin main form#profileInfo section label:nth-of-type(1) {
+  padding-top: 0;
+}
+body section#Admin main form#updatePass section input,
+body section#Admin main form#profileInfo section input {
+  background-color: #F0F0F0;
+  padding: 10px 0 3px;
+  border-bottom: 1px solid #F0F0F0;
+}
+body section#Admin main form#updatePass section input:focus,
+body section#Admin main form#profileInfo section input:focus {
+  border: none;
+}
+body section#Admin main form#updatePass section input.update,
+body section#Admin main form#profileInfo section input.update {
+  background-color: #F0F0F0;
+  padding: 11px;
+  color: #333;
+  border: 1px solid #F0F0F0;
+}
+body section#Admin main form#updatePass input#saveProfile,
+body section#Admin main form#profileInfo input#saveProfile {
+  width: auto;
+  display: none;
+}
+body section#Admin main form#updatePass {
+  display: none;
+}
+body section#Admin main form#updatePass input {
+  padding: 10px;
+  background-color: #F0F0F0;
+  color: #333;
+}
+body section#Admin main form#updatePass input:focus {
+  border: none;
+}
+body section#Admin main form#updatePass input[name=updatePassword] {
+  width: auto;
+}
+body section#Admin main h1#H1updatePass {
+  color: #333;
+  text-decoration: underline;
+  cursor: pointer;
+}
+body section#Admin aside#rightAdminSide {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+  font: normal 16px/20px Lato, sans-serif;
+  color: #333;
+  background-color: white;
+  padding: 10px;
+}
+body section#Admin aside#rightAdminSide button {
+  width: 100%;
+}
+body section#Admin aside#rightAdminSide button span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+body section#Admin aside#rightAdminSide button span#spin {
+  display: none;
+}
+body section#Admin aside#rightAdminSide label {
+  margin: 30px 0 5px;
+  display: block;
+}
+body section#Admin aside#rightAdminSide input {
+  padding: 5px;
+  width: 100%;
+  outline: none;
+}
+body section#Admin aside#rightAdminSide section#featuredImg {
+  position: relative;
+  width: 100%;
+  background-color: #aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-size: cover;
+}
+body section#Admin aside#rightAdminSide section#featuredImg input#finput {
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+body section#Admin aside#rightAdminSide section#featuredImg span {
+  display: block;
+  text-align: center;
+}
+body section#Admin aside#rightAdminSide section#featuredImg:hover {
+  color: white;
+  background-color: #333;
+}
+body section#Admin aside#rightAdminSide section#featuredImg i#imgspiner {
+  display: none;
+}
+body section#popUpcontainer {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+body section#popUpcontainer section#signInUpContainer {
+  margin: auto;
+  padding: 0;
+  background-color: white;
+  margin-top: 80px;
+}
+body section#popUpcontainer section#signInUpContainer form {
+  padding: 30px;
+}
+body section#popUpcontainer section#signInUpContainer form input {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 3px 0 15px;
+  font: 14px/135% Lato, sans-serif;
+}
+body section#popUpcontainer section#signInUpContainer form input.button, body section#popUpcontainer section#signInUpContainer section#Admin main form#updatePass input[name=updatePassword], body section#Admin main section#popUpcontainer section#signInUpContainer form#updatePass input[name=updatePassword] {
+  width: auto;
+  margin: 20px auto;
+  font: 22px/135% Lato, sans-serif;
+}
+body section#popUpcontainer section#signInUpContainer form a {
+  color: #333;
+}
+body section#popUpcontainer section#signInUpContainer i#closeLogin {
+  color: #aaa;
+  position: fixed;
+  top: 40px;
+  left: calc(50% - 17px);
+  cursor: pointer;
+}
+body section#popUpcontainer section#signInUpContainer i#closeLogin:hover {
+  color: white;
+}
+body section#popUpcontainer section#signInUpContainer section#logInOrUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+body section#popUpcontainer section#signInUpContainer section#logInOrUp section#choseLogIn,
+body section#popUpcontainer section#signInUpContainer section#logInOrUp section#choseSignUp {
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+  font: 18px/135% Lato, sans-serif;
+  cursor: pointer;
+}
+body section#popUpcontainer section#signInUpContainer section#logInOrUp section#choseSignUp {
+  background-color: #333;
+  color: white;
+}
+body section#popUpcontainer section#signInUpContainer section#recoverTitle {
+  display: none;
+  font: 28px/30px Lato, sans-serif;
+  background-color: #333;
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+}
+body section#popUpcontainer section#signInUpContainer section#recoverTitle h1 {
+  margin: 0;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form label {
+  font: 18px/135% Lato, sans-serif;
+  color: #333;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input#remember {
+  display: unset;
+  width: auto;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input::-webkit-input-placeholder {
+  color: #aaa;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input::-moz-placeholder {
+  color: #aaa;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input:-ms-input-placeholder {
+  color: #aaa;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input::-ms-input-placeholder {
+  color: #aaa;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form input::placeholder {
+  color: #aaa;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form#recover, body section#popUpcontainer section#signInUpContainer section#loadfrom form#signup {
+  display: none;
+}
+body section#popUpcontainer section#signInUpContainer section#loadfrom form a {
+  display: block;
+}
+body .container {
+  width: 70%;
+  margin: auto;
+}
+body .container section#logoMenuContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+body .container section#logoMenuContainer section#logo {
+  width: 30%;
+}
+body .container section#logoMenuContainer section#logo a {
+  text-decoration: none;
+}
+body .container section#logoMenuContainer section#logo a span {
+  font: 24px/48px Lato, sans-serif;
+  color: #333;
+}
+body .container section#logoMenuContainer section#menu {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl, body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 48px;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li, body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li a, body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li a {
+  padding: 15px 0;
+  text-decoration: none;
+  color: #aaa;
+  font: 14px Lato, sans-serif;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li:hover a, body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li:hover a {
+  color: #333;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile, body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li#profile {
+  position: relative;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul {
+  display: none;
+  font: 14px/40px Lato, sans-serif;
+  color: #333;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  min-width: 150px;
+  background-color: white;
+  box-shadow: 2px 3px 5px -3px black;
+  border: 1px solid #cacaca;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li {
+  display: block;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul li a {
+  padding: 15px 0;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile ul::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: white;
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  transform: rotate(45deg);
+  border: 1px solid #cacaca;
+  border-right: none;
+  border-bottom: none;
+}
+body .container section#logoMenuContainer section#menu ul#menuUl li#profile:hover ul {
+  display: block;
+}
+body .container section#aboutMe {
+  background-color: white;
+  padding: 20px;
+  color: #333;
+}
+body .container section#aboutMe h1 {
+  font: 40px/135% Lato, sans-serif;
+  margin: 10px 0;
+}
+body .container section#aboutMe p {
+  font: 14px/160% Lato, sans-serif;
+}
+body .container section#aboutMe h2 {
+  font: 30px/135% Lato, sans-serif;
+  margin: 10px 0;
+}
+body .container section#getInTouch {
+  background-color: white;
+  padding: 20px;
+  color: #333;
+}
+body .container section#getInTouch h1 {
+  font: 40px/135% Lato, sans-serif;
+  margin: 10px 0;
+}
+body .container section#getInTouch p {
+  font: 14px/160% Lato, sans-serif;
+}
+body .container section#getInTouch form label {
+  font: 700 14px/135% Lato, sans-serif;
+}
+body .container section#getInTouch form input, body .container section#getInTouch form textarea {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 3px 0 15px;
+  font: 14px/135% Lato, sans-serif;
+}
+body .container section#getInTouch form textarea {
+  min-height: 110px;
+}
+body .container section#getInTouch form .button, body .container section#getInTouch section#Admin main form#updatePass input[name=updatePassword], body section#Admin main .container section#getInTouch form#updatePass input[name=updatePassword] {
+  width: auto;
+}
+body .container section#mainAsideParent {
+  padding: 30px 0 50px;
+}
+body .container section#mainAsideParent main section#categorieAlert {
+  width: 100%;
+  padding: 14px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+body .container section#mainAsideParent main section#categorieAlert h1 {
+  font: 40px/40px Lato, sans-serif;
+  margin: 10px 0;
+}
+body .container section#mainAsideParent main article {
+  display: flex;
+  justify-content: flex-start;
+  background-color: white;
+  font: 18px/30px Lato, sans-serif;
+  padding: 20px;
+  color: #333;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+body .container section#mainAsideParent main article section.aricleimg {
+  background-size: cover;
+  flex-basis: 20%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+body .container section#mainAsideParent main article h2.subject {
+  margin: 0;
+  font-size: 22px;
+}
+body .container section#mainAsideParent main article section.dateTag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 10px 10px 0 0;
+  font-size: 13px;
+}
+body .container section#mainAsideParent main article section.dateTag p {
+  margin: 0;
+  color: #aaa;
+}
+body .container section#mainAsideParent main article section.dateTag > span {
+  margin: 0 10px;
+}
+body .container section#mainAsideParent main article section.dateTag a {
+  color: #aaa;
+  text-decoration: none;
+}
+body .container section#mainAsideParent main article div pre {
+  font: 14px/30px Lato, sans-serif;
+  white-space: normal !important;
+  margin: 0;
+}
+body .container section#mainAsideParent main article a.readMore {
+  color: #333;
+}
+body .container section#mainAsideParent aside section#info {
+  padding: 20px;
+  background-color: white;
+}
+body .container section#mainAsideParent aside section#info section#asideimg {
+  background-size: cover;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+}
+body .container section#mainAsideParent aside section#info p {
+  color: #333;
+  font: 14px/145% Lato, sans-serif;
+}
+body .container section#mainAsideParent aside section#info span {
+  width: 50%;
+  height: 1px;
+  display: block;
+  background-color: #aaa;
+}
+body .container section#mainAsideParent aside section#info h2 {
+  font: 14px/135% Lato, sans-serif;
+  color: #333;
+}
+body .container section#mainAsideParent aside section#info a {
+  text-decoration: none;
+  font: 14px/135% Lato, sans-serif;
+  color: #aaa;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: block;
+  margin-bottom: 15px;
+}
+body .container section#mainAsideParent aside section#info a:hover {
+  color: #333;
+}
+body .container section#mainAsideParent aside section#info section#socialMedia ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+body .container section#mainAsideParent aside section#info section#socialMedia ul li {
+  display: inline-block;
+}
+body .container section#mainAsideParent aside section#info section#socialMedia ul li a {
+  margin: 0;
+}
+body .container section#mainAsideParent aside section#info p#copyRight {
+  font: 14px/160% Lato, sans-serif;
+  color: #aaa;
+}
+body .container form#recover2 {
+  font: 14px/160% Lato, sans-serif;
+  width: 60%;
+  margin: auto;
+  padding: 30px;
+}
+body .container form#recover2 input {
+  display: block;
+  padding: 11px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .container form#recover2 input[type=submit] {
+  width: auto;
+}
+body nav {
+  width: 100%;
+  padding: 15px 0;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+body section#succeed,
+body section#error {
+  padding: 14px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 5px;
+}
+body section#succeed p,
+body section#error p {
+  margin: 0;
+  font: 18px/135% Lato, sans-serif;
+}
+body section#succeed {
+  color: #61986e;
+  border-color: #61986e;
+  background-color: #D4EDDA;
+}
+body section#succeed p a {
+  color: #61986e;
+  font-weight: bold;
+  text-decoration: none;
+}
+body section#error {
+  border-color: #ff505c;
+  color: #ff505c;
+  background-color: #F7D8DA;
+}
+body section#error p a {
+  color: #ff505c;
+  font-weight: bold;
+  text-decoration: none;
+}
+body section#profileContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 50px 0;
+}
+body section#profileContainer section#profileImg {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  padding: 0 50px 0 0;
+  background-size: cover;
+}
+body section#profileContainer section#profileImg section {
+  width: 100%;
+  height: 100%;
+}
+body section#profileContainer section#profileInfo {
+  color: #333;
+  padding: 0 0 0 50px;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  /*width: 50%;*/
+  min-height: 600px;
+}
+body section#profileContainer section#profileInfo h3 {
+  font: 22px Lato, sans-serif;
+  margin: 0 0 11px;
+}
+body section#profileContainer section#profileInfo h1 {
+  font: 700 40px/135% Lato, sans-serif;
+  margin: 0 0 11px;
+}
+body section#profileContainer section#profileInfo h2 {
+  font: 30px/135% Lato, sans-serif;
+  margin: 0 0 11px;
+}
+body section#profileContainer section#profileInfo p {
+  color: #aaa;
+  font: 18px/135% Lato, sans-serif;
+  text-align: justify;
+}
+body section#profileContainer section#profileInfo p:nth-of-type(1) {
+  margin: 0 0 50px 0;
+}
+body section#profileContainer section#profileInfo p:nth-of-type(2), body section#profileContainer section#profileInfo p:nth-of-type(3), body section#profileContainer section#profileInfo p:nth-of-type(4), body section#profileContainer section#profileInfo p:nth-of-type(5) {
+  line-height: 95%;
+}
+body section#profileContainer section#profileInfo i {
+  color: #aaa;
+  float: left;
+  width: 30px;
+}
+body section#profileContainer section#profileInfo i:nth-of-type(5), body section#profileContainer section#profileInfo i:nth-of-type(6), body section#profileContainer section#profileInfo i:nth-of-type(7) {
+  color: #aaa;
+  -webkit-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: unset;
+  margin: 50px 15px 0 0;
+  cursor: pointer;
+}
+body section#profileContainer section#profileInfo i:nth-of-type(5):hover, body section#profileContainer section#profileInfo i:nth-of-type(6):hover, body section#profileContainer section#profileInfo i:nth-of-type(7):hover {
+  color: #333;
+}
+
+@media only screen and (max-width: 991px) {
+  section#Admin {
+    flex-direction: column;
+  }
+  section#Admin aside#leftAdminSide, section#Admin main {
+    margin-bottom: 20px;
+  }
+  section#Admin aside#leftAdminSide ul, section#Admin main ul {
+    text-align: center;
+  }
+
+  section#hideMobileMenu {
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: #F44336;
+    padding: 0px 100px;
+    cursor: pointer;
+  }
+
+  section#mobileMenu {
+    background-color: #333;
+    height: 100%;
+    position: fixed;
+    left: -225.047px;
+  }
+  section#mobileMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  section#mobileMenu ul li a {
+    display: block;
+    color: white;
+    padding: 15px 100px 15px 30px;
+    font: 18px/160% Lato, sans-serif;
+    border-bottom: 1px solid white;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+  section#mobileMenu ul li a i {
+    width: 25px;
+  }
+  section#mobileMenu ul li a:hover {
+    background-color: #aaa;
+  }
+
+  .showMobileMenu {
+    display: block !important;
+    left: 0 !important;
+  }
+
+  nav .container section#logoMenuContainer section#menu {
+    display: none;
+  }
+  nav .container section#logoMenuContainer section#iconMenu {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  nav .container section#logoMenuContainer section#iconMenu .fa-bars {
+    color: #333;
+    line-height: 48px;
+    cursor: pointer;
+  }
+
+  section.container {
+    width: 95%;
+  }
+  section.container main section#profileContainer {
+    display: block;
+  }
+  section.container main section#profileContainer section#profileImg {
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin: 0 auto 40px;
+  }
+  section.container main section#profileContainer section#profileImg section {
+    border-radius: 50%;
+  }
+  section.container main section#profileContainer section#profileInfo {
+    padding: 0;
+    width: 100%;
+  }
+  section.container main section#profileContainer section#profileInfo h1, section.container main section#profileContainer section#profileInfo h2, section.container main section#profileContainer section#profileInfo h3 {
+    text-align: center;
+  }
+
+  section#popUpcontainer section#signInUpContainer {
+    width: 90%;
+  }
+  section#popUpcontainer section#signInUpContainer form {
+    padding: 20px;
+  }
+
+  section#mainAsideParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  section#mainAsideParent aside {
+    margin-top: 30px;
+  }
+  section#mainAsideParent aside section#info {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  section#mainAsideParent aside section#info section#asideimg {
+    width: 250px;
+    height: 250px;
+  }
+  section#mainAsideParent aside section#info span {
+    margin: 25px auto;
+  }
+  section#mainAsideParent main article {
+    flex-direction: column;
+  }
+  section#mainAsideParent main article section.aricleimg {
+    flex-basis: unset !important;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto 30px;
+  }
+}
+@media only screen and (min-width: 1547px) {
+  body nav .container section#logoMenuContainer section#iconMenu {
+    display: none;
+  }
+  body section#Admin aside#leftAdminSide {
+    width: 15%;
+    flex: 0 0 15%;
+  }
+  body section#Admin main {
+    padding: 0 30px;
+  }
+  body section#popUpcontainer section#signInUpContainer {
+    width: 40%;
+  }
+  body section#popUpcontainer section#signInUpContainer form {
+    padding: 20px;
+  }
+  body section#mainAsideParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  body section#mainAsideParent aside {
+    width: 20%;
+  }
+  body section#mainAsideParent aside section#info section#asideimg {
+    width: 150px;
+    height: 150px;
+  }
+  body section#mainAsideParent aside section#info section#socialMedia ul li {
+    margin-right: 15px;
+  }
+  body section#mainAsideParent aside section#info span {
+    margin: 25px auto;
+  }
+  body section#mainAsideParent main {
+    width: 80%;
+    margin-left: 3%;
+  }
+  body section#mainAsideParent main section.aricleimg {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1547px) {
+  body nav .container section#logoMenuContainer section#iconMenu {
+    display: none;
+  }
+  body section#Admin {
+    flex-direction: column;
+  }
+  body section#Admin aside#leftAdminSide ul {
+    text-align: center;
+  }
+  body section#Admin aside#leftAdminSide, body section#Admin main {
+    margin-bottom: 20px;
+  }
+  body section#Admin aside#rightAdminSide section#featuredImg {
+    width: 50%;
+    margin: auto;
+  }
+  body section.container main section#profileContainer {
+    display: block;
+  }
+  body section.container main section#profileContainer section#profileImg {
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin: 0 auto 40px;
+  }
+  body section.container main section#profileContainer section#profileImg section {
+    border-radius: 50%;
+  }
+  body section.container main section#profileContainer section#profileInfo {
+    padding: 0;
+    width: 100%;
+  }
+  body section.container main section#profileContainer section#profileInfo h1, body section.container main section#profileContainer section#profileInfo h2, body section.container main section#profileContainer section#profileInfo h3 {
+    text-align: center;
+  }
+  body section#popUpcontainer section#signInUpContainer {
+    width: 60%;
+  }
+  body section#popUpcontainer section#signInUpContainer form {
+    padding: 20px;
+  }
+  body section#mainAsideParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  body section#mainAsideParent aside {
+    width: 22%;
+  }
+  body section#mainAsideParent aside section#info section#asideimg {
+    width: 100px;
+    height: 100px;
+  }
+  body section#mainAsideParent aside section#info section#socialMedia ul li {
+    margin-right: -2px;
+  }
+  body section#mainAsideParent aside section#info span {
+    margin: 25px 0;
+  }
+  body section#mainAsideParent main {
+    width: 78%;
+    margin-left: 3%;
+  }
+  body section#mainAsideParent main article {
+    flex-direction: column;
+  }
+  body section#mainAsideParent main article section.aricleimg {
+    flex-basis: unset !important;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 20px;
+  }
+  body section#mainAsideParent aside {
+    margin-top: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

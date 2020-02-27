@@ -1,0 +1,154 @@
+@media only screen and (max-width: 991px) {
+	
+
+	section#Admin {
+		flex-direction: column;
+
+		aside#leftAdminSide, main {
+			margin-bottom: 20px;
+			ul {
+				text-align: center;
+			}
+		}
+
+	}
+
+	section#hideMobileMenu {
+		color: white;
+	    position: fixed;
+	    left: 0;
+	    bottom: 0;
+	    background: #F44336;
+	    padding: 0px 100px;
+	    cursor: pointer;
+	}
+
+	section#mobileMenu {
+		background-color: #333;
+	    height: 100%;
+	    position: fixed;
+	    left: -225.047px;
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			li {
+				a {
+					display: block;
+					color: $white;
+					padding: 15px 100px 15px 30px;
+					font: 18px/160% $fontFamily;
+					border-bottom: 1px solid $white;
+					white-space: nowrap;
+					text-decoration: none;
+
+					i {
+						width: 25px;
+					}
+
+					&:hover {
+						background-color: $navlinks;
+					}
+				}
+			}
+		}
+	}
+
+	.showMobileMenu {
+    	display: block !important;
+    	left: 0 !important;
+	}
+
+	nav {
+		.container {
+			section#logoMenuContainer {
+				section#menu {
+    				display: none;
+				}
+				section#iconMenu {
+					width: 70%;
+    				display: -webkit-box;
+    				display: -ms-flexbox;
+    				display: flex;
+    				-webkit-box-pack: end;
+    				    -ms-flex-pack: end;
+    				        justify-content: flex-end;
+    				.fa-bars {
+    					color: $hovernavlinks;
+    					line-height: 48px;
+    					cursor: pointer;
+    				}
+
+
+				}
+			}
+		}
+	}
+	
+	section.container {
+		width: 95%;
+		main {
+			section#profileContainer {
+				display: block;
+				section#profileImg {
+					width: 250px;
+					height: 250px;
+					padding: 0;
+					margin: 0 auto 40px;
+					section {
+						border-radius: 50%;
+					}
+				}
+				section#profileInfo {
+					padding: 0;
+					width: 100%;
+					h1, h2, h3 {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	section#popUpcontainer {
+		section#signInUpContainer {
+			width: 90%;
+			form {
+				padding: 20px;
+			}
+		}
+	}
+	section#mainAsideParent {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+		aside {
+			margin-top: 30px;
+			section#info {
+				margin-bottom: 30px;
+				text-align: center;
+				section#asideimg {
+					width: 250px;
+					height: 250px;
+				}
+				span {
+					margin: 25px auto;
+				}
+			}
+		}
+		main {
+			article {
+				flex-direction: column;
+				section.aricleimg {
+					flex-basis: unset !important;
+					width: 100%;
+					height: 400px;
+					margin: 0 auto 30px;
+				}
+			}
+		}
+	}
+}

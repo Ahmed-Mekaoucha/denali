@@ -1,0 +1,72 @@
+@media only screen and (min-width: 1547px) {
+	body {
+		nav {
+			.container {
+				section#logoMenuContainer {
+					section#iconMenu {
+    					display: none;
+					}
+				}
+			}
+		}
+
+		section#Admin {
+			
+			aside#leftAdminSide {
+				width: 15%;
+				flex: 0 0 15%;
+			}
+			main {
+				padding: 0 30px;
+			}
+		}
+
+		section#popUpcontainer {
+			section#signInUpContainer {
+				width: 40%;
+				form {
+					padding: 20px;
+				}
+			}
+		}
+
+		section#mainAsideParent {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
+			aside {
+				width: 20%;
+				section#info {
+					section#asideimg {
+	    				width: 150px;
+	    				height: 150px;
+	    			}
+	    			section#socialMedia {
+	    				ul {
+	    					li {
+	    						margin-right: 15px;
+	    					}
+	    				}
+	    			}
+					span {
+						margin: 25px auto;
+					}
+	    		}
+			}
+			main {
+				width: 80%;
+				margin-left: 3%;
+				section.aricleimg {
+					width: 200px;
+					height: 200px;
+					float: left;
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	
+}
