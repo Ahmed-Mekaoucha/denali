@@ -14,6 +14,12 @@ class Model extends Dbh {
 		$stmt = $this->connect()->prepare($sql);
 		$stmt->execute(['firstName' => $firstN, 'lastName' => $lastN, 'email' => $email, 'username' => $userN, 'id' => $id]);
 	}
+
+	public function setProfilePicture($profilePicture, $email) {
+		$sql= 'UPDATE users SET profilePicture=:profilePicture WHERE email=:email;';
+		$stmt = $this->connect()->prepare($sql);
+		$stmt->execute(["profilePicture" => $profilePicture, "email" => $email]);
+	}
 	
 	protected function getUsers() {
 		$sql = 'SELECT * FROM users;';

@@ -9,6 +9,10 @@ class Controller extends Model {
 		$this->updateUsers($id, $firstN, $lastN, $email, $userN);
 	}
 
+	public function profilePicture($profilePicture, $email) {
+		$this->setProfilePicture($profilePicture, $email);
+	}
+
 	public function rmvPassRcv($email) {
 		$this->rmPassRecov($email);
 	}
